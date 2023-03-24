@@ -50,7 +50,6 @@ nav {
     z-index: 2;
     padding: 15px 20px;
     transition: all 0.5s ease;
-
 }
 
 .navbar.sticky
@@ -128,6 +127,10 @@ nav .logo a {
     color: white;
 }
 
+.links li a:hover {
+  color: yellow;
+}
+
 .links .profile-pic, .links .logout {
     display: none;
   }
@@ -183,6 +186,9 @@ nav .logo a {
   margin-left: 10px;
   width: 55%;
 }
+.movies {
+  padding-top: 2rem;
+}
 
 .movies h2 {
 padding:1rem 0.5rem;
@@ -195,7 +201,7 @@ font-weight: bolder;
 
 .slider {
   background-color: #ccc;
-  padding: 8px 0;
+  padding: 8px 12px;
   position: relative;
   width: 100%;
   height: 520px;
@@ -207,13 +213,24 @@ font-weight: bolder;
 .slide-track {
   display: flex;
   height: 100%;
-  width: calc(300px * 6);
-  animation: 12s linear 2s infinite alternate scroll;
-  margin-right: 6px;
+  width: auto;
+  perspective: 100px;
+  animation: 22s linear 2s infinite alternate scroll;
 }
 
 .slide-track:hover {
   animation-play-state: paused;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(calc(-350px * 4));
+  }
 }
  
 .card-slides {
@@ -227,20 +244,17 @@ font-weight: bolder;
   border-radius: 11px;
   padding:5px 5px;
   margin: 0 10px;
-  perspective: 100px;
+   transition: transform 1s ;
+ 
 }
 .card-slides:hover {
     box-shadow: 0 3px 10px var(--main-color);
+    transform :translateZ(1px);
 }
 
 .card-slides img {
   width: 100%;
   height: 100%;
-  transition: transform 1s ;
-}
-
-.card-slides .movie-info img:hover {
-  transform :translateZ(1.5px);
 }
 
 .card-slides h3 {
@@ -261,20 +275,13 @@ font-weight: bolder;
   font-weight: bold;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0)
-  }
-
-  100% {
-    transform: translateX(calc(-300px * 2));
-  }
-}
 
 .series {
   /* background-color: #ccc; */
   margin: 10px 0;
+  padding-top: 2rem;
 }
+
 
 /* star rating icons */
 
@@ -330,6 +337,9 @@ font-weight: bolder;
 
 .faq {
   overflow-y: hidden;
+  margin-bottom: 30px;
+  padding-top: 2rem;
+
 }
 
 .faq h2 {
@@ -379,9 +389,10 @@ font-weight: bolder;
 }
 
 .top-stories {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 2rem;
 }
 
 .top-stories h2 {
@@ -439,10 +450,12 @@ font-weight: bolder;
 .upcoming-events {
   display: flex;
   flex-direction: column;
-max-width: 100%;
-margin-top: 1rem;
-border: 2px solid black;
-padding: 2px;
+  max-width: 100%;
+  margin-top: 1rem;
+  border: 2px solid black;
+  padding-top: 2rem;
+  padding-bottom: 2px;
+  padding-left: 2px;
 }
 
 
@@ -496,7 +509,8 @@ footer{
   width: 100vw;
   background-color: var(--main-color);
   color: white;
-  padding: 10px;
+  margin-top: 30px;
+  padding: 12px;
 }
 
 .first-row  {
@@ -566,10 +580,6 @@ justify-content: space-between;
 /* Media Queries */
 
 
-
-@media(min-width:1301px) {
-
-}
 
 
 @media(max-width:1300px) {
@@ -648,14 +658,15 @@ display: none;
       }
   }
 
-.links {
-  display: none;
-}
 
 
 
 
 @media(max-width: 769px) {
+  
+.links {
+  display: none;
+}
 
 }
  
@@ -713,7 +724,15 @@ footer .second-row, .third-row {
 @media(max-width: 415px){
 
 .nav_search {
-    width: 14rem;
+    display: none;
+}
+
+.nav_search2 {
+    width: 18rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
 }
 
   .logout {
