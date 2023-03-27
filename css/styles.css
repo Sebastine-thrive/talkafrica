@@ -277,7 +277,6 @@ font-weight: bolder;
 
 
 .series {
-  /* background-color: #ccc; */
   margin: 10px 0;
   padding-top: 2rem;
 }
@@ -458,7 +457,6 @@ font-weight: bolder;
   padding-left: 2px;
 }
 
-
 .upcoming-events h2 {
 padding: 1rem 0.5rem;
 text-transform: uppercase;
@@ -467,7 +465,6 @@ font-weight: bolder;
 
 .events {
   display: flex;
-  /* flex-wrap: wrap; */
   padding: 0 8px;
   max-width: 100%;
   margin: 5px 0;
@@ -659,9 +656,6 @@ display: none;
   }
 
 
-
-
-
 @media(max-width: 769px) {
   
 .links {
@@ -745,6 +739,7 @@ footer .second-row, .third-row {
 
 .landing_content h2,h4 {
   width: 18rem;
+  line-height: 2rem;
 }
 
   .section {
