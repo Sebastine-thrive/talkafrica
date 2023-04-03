@@ -200,7 +200,6 @@ font-weight: bolder;
 .slider {
   background-color: #ccc;
   padding: 8px 12px;
-  position: relative;
   width: 100%;
   height: 520px;
   display:grid;
@@ -213,7 +212,7 @@ font-weight: bolder;
   height: 100%;
   width: auto;
   perspective: 100px;
-  animation: 22s linear 2s infinite alternate scroll;
+  animation: 25s linear 2s infinite alternate scroll;
 }
 
 .slide-track:hover {
@@ -227,7 +226,7 @@ font-weight: bolder;
   }
 
   100% {
-    transform: translateX(calc(-370px * 4));
+    transform: translateX(calc(-400px * 4));
   }
 }
  
@@ -746,24 +745,33 @@ footer .second-row, .third-row {
   line-height: 2rem;
 }
 
+
   .section {
     width: 100vw;
       flex-direction: column
 
   }
+
 .left_section, .right_section {
   width: 100%;
   overflow-x: hidden;
   margin: 5px;
+  margin-left: 3px;
 }
 
 .slider {
   margin: 0 3px;
+  transform: scale(0.85);
 }
   .upcoming-events {
     width: 100%;
     margin: 6px 0;
   }
+
+  .movies {
+  padding-top: 0;
+  }
+
 
 .story, .events {
   display: flex;
@@ -808,9 +816,10 @@ footer .second-row, .third-row {
   margin:0;
 }
 .event-info img{
- width: 20rem;
+ width: 19rem;
   height: 14rem;
 }
+
 
 }
 
