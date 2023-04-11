@@ -45,7 +45,6 @@ nav {
   background-color: #0047ab;
   height: 3rem;
   border-bottom: 2px solid white;
-  font-family: "Shantell Sans", cursive;
   position: fixed;
   z-index: 2;
   padding: 15px 20px;
@@ -84,6 +83,7 @@ nav {
 
 .navbar .menu .nav-item .nav-link {
   color: var(--white);
+  font-family: "Shantell Sans", cursive;
   font-size: 16px;
   font-weight: 600;
   display: block;
@@ -193,14 +193,16 @@ nav .logo a {
   flex-direction: column;
   margin-left: 10px;
   width: 55%;
+  height: auto;
 }
+
 .movies {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .movies h2 {
   font-family: "Playfair Display", serif;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   font-weight: bolder;
 }
@@ -283,7 +285,7 @@ nav .logo a {
 }
 
 .series {
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   padding-top: 5px;
 }
 
@@ -392,7 +394,7 @@ nav .logo a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 
 .top-stories h2 {
@@ -674,7 +676,7 @@ a {
 
   .navbar .menu-btn {
     display: block;
-    z-index: 999;
+    z-index: 2;
   }
 
   @keyframes scroll {
@@ -794,11 +796,7 @@ a {
   }
 
   .events {
-      border: 2px solid black;
-  }
-
-  .slider {
-    transform: scale(0.85);
+    border: 2px solid black;
   }
 
   @keyframes scroll {
@@ -815,9 +813,24 @@ a {
     width: 100%;
     margin: 6px 0;
   }
+  
+  .movies,
+  .series {
+    padding: 10px 5px;
+    margin-left: 0;
+  }
 
-  .movies {
-    padding-top: 0;
+  .movies h2,
+  .series h2 {
+    font-size: 20px;
+  }
+
+  .movies h2 {
+    padding: 1rem  0;
+  }
+
+  .stories {
+    border: none;
   }
 
   .story,
@@ -866,10 +879,11 @@ a {
     margin: 0;
   }
 
-  .top-stories h2, .upcoming-events h2 {
+  .top-stories h2,
+  .upcoming-events h2 {
     padding: 1rem 0.5rem;
   }
-  
+
   .event-info img {
     width: 19.8rem;
     height: 14rem;
