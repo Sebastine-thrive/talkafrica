@@ -70,3 +70,40 @@ setInterval(() => {
   element.style.backgroundImage = images[currentIndex];
   currentIndex = (currentIndex + 1) % images.length;
 }, 4000);
+
+//Alternate Movement animation for logo
+const logo = document.querySelectorAll(".logo");
+const alternateMovement = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle(
+        "move-left-and-right",
+        entry.isIntersecting
+      );
+    });
+  },
+  {
+    threshold: 1,
+  }
+);
+
+
+logo.forEach((item) => {
+  alternateMovement.observe(item);
+});
+
+// Intersection Observer animation for News and Events Section on view
+const storiesAndEvents  = document.querySelectorAll(".story, .events-body, accordion-title");
+
+const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+    })
+}, {
+    threshold: 0.3
+})
+
+storiesAndEvents.forEach(el => {
+    fadeObserver.observe(el)
+})
+

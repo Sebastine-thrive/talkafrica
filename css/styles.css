@@ -51,11 +51,6 @@ nav {
   transition: all 0.5s ease;
 }
 
-.navbar.sticky {
-  background-color: var(--main-color);
-  box-shadow: var(--shadow-black-100);
-}
-
 .menu-btn,
 .close-btn {
   display: none;
@@ -88,15 +83,33 @@ nav {
   font-weight: 600;
   display: block;
   text-transform: capitalize;
-  padding: 10px 5px;
-}
-.navbar.sticky .menu .nav-item .nav-link {
-  color: var(--white);
+  margin: 0 5px;
+  padding: 6px 5px;
+  position: relative;
+  z-index: 1;
 }
 
-.navbar.sticky .menu-btn {
+.navbar .menu .nav-item .nav-link:hover {
   color: var(--main-color);
-  background-color: var(--white);
+}
+
+.navbar .menu .nav-item .nav-link::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 100%;
+  transform: rotate(-90deg);
+  transform-origin: center left;
+  transition: 0.8s;
+  z-index: -1;
+}
+
+.navbar .menu .nav-item .nav-link:hover::before {
+  background-color: white;
+  border-radius: 5px;
+  transform: rotate(0deg);
 }
 
 .navbar.close {
@@ -116,12 +129,38 @@ nav .logo a {
   color: white;
   font-weight: 600;
   text-transform: capitalize;
+  transition: 1.5s;
+}
+/* 
+Animation for logo */
+.move-left-and-right {
+  animation: moveLeftAndRight 2s linear 4 alternate 3s;
+}
+
+.move-left-and-right:hover {
+  animation-play-state: paused;
+}
+
+@keyframes moveLeftAndRight {
+  0% {
+    transform: translateX(-0.3rem);
+    visibility: visible;
+  }
+
+  50% {
+    transform: scaleX(1.2);
+  }
+
+  100% {
+    transform: translateX(0.3rem);
+    visibility: visible;
+  }
 }
 
 .links {
   display: flex;
   justify-content: space-evenly;
-  width: 20rem;
+  width: 24rem;
 }
 
 .links li a:hover {
@@ -173,6 +212,15 @@ nav .logo a {
   text-transform: uppercase;
   opacity: 1;
   text-shadow: 1px 1px 2px black, 0 0 0.5em white, 0 0 0.5em blue;
+  transform: translateX(-120%);
+  animation: content 1.3s forwards ease-in-out;
+  transition: 1.5s;
+}
+
+@keyframes content {
+  to {
+    transform: translate(0);
+  }
 }
 
 .landing_content h2 {
@@ -421,6 +469,15 @@ nav .logo a {
   border: 2px solid black;
 }
 
+.story {
+  opacity: 0;
+  transition: 500ms ease-in;
+}
+
+.story.show {
+  opacity: 1;
+}
+
 .story img {
   width: 18rem;
   height: 16rem;
@@ -486,6 +543,15 @@ nav .logo a {
   border-top: 2px solid black;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
+}
+
+.events-body {
+  opacity: 0;
+  transition: 500ms ease-in;
+}
+
+.events-body.show {
+  opacity: 1;
 }
 
 .events1 {
