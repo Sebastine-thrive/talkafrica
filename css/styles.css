@@ -5,6 +5,11 @@ font-family: 'Chakra Petch', sans-serif;
 font-family: 'Kanit', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Shantell Sans', cursive; */
+
+/* font-family: "Outfit", sans-serif; */
+/* font-family: "Manrope", sans-serif; */
+/* font-family: "DM Sans", sans-serif; */
+
 /*===== Global CSS =====*/
 
 * {
@@ -28,11 +33,21 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 16px;
   font-weight: normal;
   overflow-x: hidden;
   background-color: var(--white);
+}
+
+h1,
+h2 {
+  font-family: "Manrope", sans-serif;
+}
+
+h2,
+h3 {
+  font-family: "DM Sans", sans-serif;
 }
 
 /* navigation */
@@ -70,6 +85,10 @@ nav {
   color: red;
 }
 
+.navbar {
+  font-family: "Outfit", sans-serif;
+}
+
 .navbar .menu .nav-item {
   display: inline-block;
   position: relative;
@@ -78,7 +97,6 @@ nav {
 
 .navbar .menu .nav-item .nav-link {
   color: var(--white);
-  font-family: "Shantell Sans", cursive;
   font-size: 16px;
   font-weight: 600;
   display: block;
@@ -124,10 +142,11 @@ nav {
   border-radius: 10px;
 }
 
-nav .logo a {
-  font-size: 24px;
+.navbar .logo a h1 {
+  font-family: "Shantell Sans", cursive;
+  font-size: 26px;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: capitalize;
   transition: 1.5s;
 }
@@ -417,6 +436,7 @@ Animation for logo */
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
 }

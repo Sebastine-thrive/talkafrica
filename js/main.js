@@ -38,6 +38,7 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
+
 // FAQS
 let accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -46,7 +47,7 @@ for (let item of accordionItems) {
   let icon = title.querySelector(".icon");
   let content = item.querySelector(".accordion-content");
 
-  icon.addEventListener("click", function () {
+  title.addEventListener("click", function () {
     content.classList.toggle("show");
     if (content.classList.contains("show")) {
       icon.innerHTML = "&#9650;"; // change icon to up arrow
