@@ -82,7 +82,15 @@ nav {
 }
 
 .close-btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.close-menu-btn {
+  width: 44px;
   color: red;
+  cursor: pointer;
+  /* margin-right: 2rem; */
 }
 
 .navbar {
@@ -345,6 +353,7 @@ Animation for logo */
 .series-rating {
   display: flex;
   justify-content: center;
+  height: auto;
   align-items: center;
 }
 
@@ -354,6 +363,7 @@ Animation for logo */
   text-transform: capitalize;
   font-size: 18px;
   font-weight: bold;
+  margin-right: 3px;
 }
 
 .series {
@@ -392,7 +402,9 @@ Animation for logo */
 }
 .star-rating__ico {
   float: right;
-  padding-left: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 8px;
   cursor: pointer;
   color: #ffb300;
 }
@@ -686,6 +698,14 @@ a {
   margin: 0 15px;
 }
 
+.faq .icon {
+  transition: transform 0.5s ease-in;
+}
+
+.faq .icon.rotate {
+  transform: rotate(180deg);
+}
+
 /* Media Queries */
 
 @media (min-width: 1600px) {
@@ -840,7 +860,7 @@ a {
 
   .event-info img,
   .story img {
-    width: 28rem;
+    width: 22rem;
   }
 
   footer .second-row,

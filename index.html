@@ -64,6 +64,13 @@
     </nav>
 
     <div class="small">
+<!-- close small screen muenu bar icon -->
+
+
+      <div class="close-btn">
+        <i class="fa fa-times close-menu-btn" aria-hidden="true"></i>
+      </div>
+
       <input
         class="nav_search_small"
         type="text"
@@ -87,11 +94,7 @@
         </li>
       </ul>
 
-      <div class="close-btn">
-        <i class="fa fa-window-close" aria-hidden="true"></i>
-      </div>
     </nav>
-
     </div>
 
     <div class="landing-image-wrapper">
@@ -1159,7 +1162,7 @@
             <div class="accordion-item">
               <div class="accordion-title">
                 What is the mission of this platform?
-                <span class="icon">&#9660; </span>
+                <span class="icon" onclick="toggleIcon(this)" >&#9660; </span>
               </div>
               <div class="accordion-content">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,

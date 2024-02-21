@@ -10,7 +10,7 @@ window.onscroll = () => {
 /*===== Nav Toggler =====*/
 const navMenu = document.querySelector(".small");
 navToggle = document.querySelector(".menu-btn");
-navClose = document.querySelector(".close-btn");
+navClose = document.querySelector(".close-menu-btn");
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("active");
@@ -18,18 +18,12 @@ if (navToggle) {
   });
 }
 
-// // Closing menu when cancel button is clicked
-// navToggle = document.querySelector(".menu-btn");
-// function linkAction() {
-//   const navMenu = document.querySelector(".small");
-//   navMenu.classList.remove("active");
-// }
-// navClose = document.querySelector(".close-btn");
-// if (navClose) {
-//   navClose.addEventListener("click", linkAction);
-// }
-
-// closing menu when link is clicked
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    navClose.classList.remove("active");
+  });
+}
 
 const navLink = document.querySelectorAll(".small-navlink");
 function linkAction() {
@@ -37,7 +31,6 @@ function linkAction() {
   navMenu.classList.remove("active");
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
-
 
 // FAQS
 let accordionItems = document.querySelectorAll(".accordion-item");
@@ -58,6 +51,8 @@ for (let item of accordionItems) {
     }
   });
 }
+
+// Landing images
 
 const images = [
   'url("images/background_images/happy1.webp")',
@@ -88,23 +83,31 @@ const alternateMovement = new IntersectionObserver(
   }
 );
 
-
 logo.forEach((item) => {
   alternateMovement.observe(item);
 });
 
 // Intersection Observer animation for News and Events Section on view
-const storiesAndEvents  = document.querySelectorAll(".story, .events-body, accordion-title");
+const storiesAndEvents = document.querySelectorAll(
+  ".story, .events-body, accordion-title"
+);
 
-const fadeObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle("show", entry.isIntersecting)
-    })
-}, {
-    threshold: 0.3
-})
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
 
-storiesAndEvents.forEach(el => {
-    fadeObserver.observe(el)
-})
+storiesAndEvents.forEach((el) => {
+  fadeObserver.observe(el);
+});
 
+// toggle faq accordion on click
+function toggleIcon(element) {
+  element.classList.toggle("rotate");
+}
