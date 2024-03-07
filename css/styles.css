@@ -704,6 +704,7 @@ a {
 
 .faq .icon.rotate {
   transform: rotate(180deg);
+  /* display: none; */
 }
 
 /* Media Queries */

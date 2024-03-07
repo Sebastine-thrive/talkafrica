@@ -33,6 +33,7 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 // FAQS
+
 let accordionItems = document.querySelectorAll(".accordion-item");
 
 for (let item of accordionItems) {
@@ -43,16 +44,17 @@ for (let item of accordionItems) {
   title.addEventListener("click", function () {
     content.classList.toggle("show");
     if (content.classList.contains("show")) {
-      icon.innerHTML = "&#9650;"; // change icon to up arrow
+      icon.innerHTML = "&#9660;"; // change icon to up arrow
       title.style.borderBottom = "none";
-    } else {
-      icon.innerHTML = "&#9660;"; // change icon back to down arrow
-      title.style.borderBottom = "1px solid #ccc";
     }
+    // else {
+    //   icon.innerHTML = "&#9660;"; // change icon back to down arrow
+    //   title.style.borderBottom = "1px solid #ccc";
+    // }
   });
 }
 
-// Landing images
+// Hero images
 
 const images = [
   'url("images/background_images/happy1.webp")',
