@@ -33,7 +33,7 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 // FAQS
-
+// show  faq answers on click
 let accordionItems = document.querySelectorAll(".accordion-item");
 
 for (let item of accordionItems) {
@@ -47,11 +47,12 @@ for (let item of accordionItems) {
       icon.innerHTML = "&#9660;"; // change icon to up arrow
       title.style.borderBottom = "none";
     }
-    // else {
-    //   icon.innerHTML = "&#9660;"; // change icon back to down arrow
-    //   title.style.borderBottom = "1px solid #ccc";
-    // }
   });
+}
+
+// toggle faq accordion on click to rotate
+function toggleIcon(element) {
+  element.classList.toggle("rotate");
 }
 
 // Hero images
@@ -108,8 +109,3 @@ const fadeObserver = new IntersectionObserver(
 storiesAndEvents.forEach((el) => {
   fadeObserver.observe(el);
 });
-
-// toggle faq accordion on click
-function toggleIcon(element) {
-  element.classList.toggle("rotate");
-}

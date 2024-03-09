@@ -1,14 +1,5 @@
 /*===== Google Fonts =====*/
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
-/* 
-font-family: 'Chakra Petch', sans-serif;
-font-family: 'Kanit', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Shantell Sans', cursive; */
-
-/* font-family: "Outfit", sans-serif; */
-/* font-family: "Manrope", sans-serif; */
-/* font-family: "DM Sans", sans-serif; */
 
 /*===== Global CSS =====*/
 
@@ -704,7 +695,6 @@ a {
 
 .faq .icon.rotate {
   transform: rotate(180deg);
-  /* display: none; */
 }
 
 /* Media Queries */
